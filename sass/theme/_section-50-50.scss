@@ -1,0 +1,54 @@
+.section-50-50 {
+    .columns {
+        background: $gray-300;
+
+        @include media-breakpoint-down(sm) { 
+            flex-direction: column!important;
+        }
+    }
+    .col {
+        padding: 5rem 0;
+        @include media-breakpoint-down(sm) { 
+            padding: 2rem 1rem;
+        }
+        article {
+            max-width: 70%;
+            margin: 0 auto;
+
+            @include media-breakpoint-down(sm) { 
+                max-width: 100%;
+            }
+        }
+
+        &.bg-image {
+            box-shadow: inset 0px 0px 50px 0px rgba(0,0,0,0.75);
+            @include media-breakpoint-down(sm) { 
+                min-height: 300px;
+            }
+        }
+    }
+    h3{
+        font-size: 1.8rem;
+        color: $green;
+        font-family: $font-title;
+    }
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        li {
+            position: relative;
+            padding-left: 20px;
+            &::before {
+                content: "";
+                position: absolute;
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                top: 8px;
+                background: $green;
+                left: 0;
+            }
+        }
+    }
+}

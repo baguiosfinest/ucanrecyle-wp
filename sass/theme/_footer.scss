@@ -1,0 +1,78 @@
+#footer-full-content {
+    padding: 4rem 0;
+
+    @include media-breakpoint-down(md) { 
+        padding: 2rem 1rem;
+    }
+
+    .wpcf7 input[type=text],
+    .wpcf7 input[type=email],
+    .wpcf7 input[type=date],
+    .wpcf7 input[type=url],
+    .wpcf7 select,
+    .wpcf7 textarea  {
+        // border-radius: 25px;
+        padding: 10px 15px 10px 20px;
+        height: 50px;
+
+        &:focus {
+            border-color: opacify($color: $green, $amount: .5);
+            box-shadow: 0 0 0 0.2rem rgba($color: $green, $alpha: .5);
+        }
+    }
+
+    .wpcf7 textarea {
+        height: 180px;
+    }
+
+    .widget-title {
+        font-family: 'Abril Fatface', cursive;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .widget-subtitle {
+        text-align: center;
+        font-family: 'Abril Fatface', cursive;
+    }
+
+    .wpcf7 .wpcf7-validation-errors {
+        height: auto;
+    }
+
+    .wpcf7-not-valid-tip {
+        font-size: .8rem;
+    }
+    
+}
+
+.fa {
+    &.green {
+        color: $green;
+        margin-right: 10px;
+    }
+}
+
+
+#wrapper-footer {
+    background: #fff;
+
+    .site-info {
+        font-size: .9rem;
+        font-weight: 300;
+    }
+}
+
+@include media-breakpoint-only(md) {  
+    #footer-full-content {
+        .col-md-4 {
+            max-width: 50%;
+            flex: 1;
+            &:last-of-type {
+                max-width: 100%;
+            }
+        }
+    }
+    
+}
+

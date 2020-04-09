@@ -1,0 +1,11 @@
+.section-text {
+    article {
+        max-width: 680px;
+        margin: 0 auto;
+        text-align: center;
+        font-weight: 300;
+        p:last-of-type {
+            margin: 0; 
+        }
+    }
+}

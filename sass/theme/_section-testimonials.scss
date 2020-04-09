@@ -1,0 +1,48 @@
+.section-testimonials {
+    .testimonial {
+        position: relative;
+        text-align: center;
+        margin: 0 auto;
+
+        .quote-left,
+        .quote-right{
+            position: absolute;
+            font-size: 2rem;
+            color: $green;
+        }
+
+        .quote-left {
+            top: 0;
+            left: 0;
+        }
+
+        .quote-right {
+            right: 0;
+            bottom: 20px;
+        }
+
+        .content {
+            font-style: italic;
+            position: relative;
+            padding: 20px 30px;
+            color: $gray-600;
+        }
+
+        .author {
+            h4 {
+                font-weight: $font-title;
+                margin-bottom: 0;
+            }
+            p {
+                color: $gray-500;
+            }
+        }
+    }
+    &.section-gray {
+        .testimonial {
+            .content {
+                color: $gray-200;
+            }
+        }
+    }
+}

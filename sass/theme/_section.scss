@@ -1,0 +1,50 @@
+.section {
+    padding: 5rem 0;
+
+    @include media-breakpoint-down(md) { 
+        padding: 2rem 1rem;
+    }
+
+    &-title{
+        text-align: center;
+        margin-bottom: 2rem;
+        span {
+            color: $green;
+        }
+        .fa {
+            color: $green;
+            font-size: 2rem;
+        }
+        h2 {
+            font-size: 2rem;
+            margin: 0;
+        }
+        p {
+            text-transform: uppercase;
+        }
+    }
+
+    &-gray {
+        background: $darker;
+        color: $gray-200;
+    }
+
+    h2, h3, h4 {
+        font-family: $font-title;
+    }
+
+    .section-inner {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 680px;
+    }
+
+    + .no-pad {
+        padding-top: 0;
+        margin-top: -5rem;
+
+        @include media-breakpoint-down(md) { 
+            margin-top: -2rem;
+        }
+    }
+}

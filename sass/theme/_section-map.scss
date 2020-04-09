@@ -1,0 +1,177 @@
+.section-map {
+    #map,
+    #map2,
+    .mapa {
+        height: 400px;
+        width: 100%;
+    }
+
+    .map-title {
+        font-family: $font-title;
+        color: $green;
+    }
+
+    &.section-full {
+        padding: 5rem 0 0;
+
+        @include media-breakpoint-down(sm) { 
+            padding: 3rem 0 0;
+        }
+
+        .container {
+            max-width: none;
+            width: 100%!important;
+            padding: 0!important;
+        }
+        #map,
+        #map2,
+        .mapa {
+            height: 500px;
+            @include media-breakpoint-down(sm) { 
+                height: 400px;
+            }
+        }
+
+        .map-wrapper {
+            border-top: rgba($color: $lightgreen, $alpha: .4)  5px solid;
+            border-bottom: rgba($color: $lightgreen, $alpha: .4) 5px solid;
+        }
+    }
+
+
+    ::-webkit-scrollbar {
+        width: 3px;
+        height: 3px;
+        border-left: 0;
+        background: rgba(0, 0, 0, 0.1);
+      }
+      
+      ::-webkit-scrollbar-track {
+        background: none;
+      }
+      
+      ::-webkit-scrollbar-thumb {
+        background: $green;
+        border-radius: 0;
+      }
+
+      .map-wrapper {
+          @extend .horizontal;
+
+          @include media-breakpoint-down(sm) { 
+            flex-direction: column!important;
+            justify-content: start!important;
+
+            .mapboxgl-canvas-container {
+                height: 400px;
+            }
+
+          }
+
+          .sidebar {
+            flex: 3;
+            background: $gray-300;
+            @include media-breakpoint-down(sm) { 
+                flex: 1;
+                height: auto;
+            }
+
+            .heading {
+                padding: 15px;
+            }
+
+            .listings .item {
+                display: block;
+                border-bottom: 1px solid #eee;
+                padding: 15px;
+                text-decoration: none;
+                &.active-map {
+                    background: $green;
+                    color: $white;
+                    a {
+                        color: $white;
+                    }
+                }
+              }
+              
+              .listings .item:last-child { border-bottom: none; }
+              
+              .listings .item .title {
+                display: block;
+                color: $green;
+                font-weight: 700;
+              }
+              
+          }
+
+          .map {
+              flex: 7;
+              @include media-breakpoint-down(sm) { 
+                flex: 1;
+            }
+          }
+
+
+        
+      }
+
+      .marker {
+        border: none;
+        cursor: pointer;
+        height: 69px;
+        width: 52px;
+        background-image: url('../images/mapmarker-ucan.png');
+        background-size: contain;
+      }
+
+}
+
+/* Marker tweaks */
+.mapboxgl-popup-close-button {
+    display: none;
+}
+
+.mapboxgl-popup-content {
+    font: 400 15px/22px 'Source Sans Pro', 'Helvetica Neue', Sans-serif;
+    padding: 0;
+    width: 220px;
+}
+
+.mapboxgl-popup-content-wrapper {
+    padding: 1%;
+}
+
+.mapboxgl-popup-content h4 {
+    background: $lightgreen;
+    color: #fff;
+    margin: 0;
+    display: block;
+    padding: 10px 15px;
+    font-size: 1.2rem;
+    border-radius: 3px 3px 0 0;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.mapboxgl-popup-content p {
+    margin: 0;
+    display: block;
+    font-weight: 400;
+}
+
+.mapboxgl-popup-content div {
+    padding: 20px;
+}
+
+.mapboxgl-container .leaflet-marker-icon {
+    cursor: pointer;
+}
+
+.mapboxgl-popup-anchor-top > .mapboxgl-popup-content {
+    margin-top: 15px;
+}
+
+.mapboxgl-popup-anchor-top > .mapboxgl-popup-tip {
+    border-bottom-color: $green;
+}

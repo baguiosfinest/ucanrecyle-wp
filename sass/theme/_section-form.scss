@@ -1,0 +1,90 @@
+.section-form {
+
+
+
+    .form-box {
+        padding: 3rem;
+        background: rgba($color: #000000, $alpha: .5);
+
+        @include media-breakpoint-down(sm) { 
+            padding: 1.5rem;
+        }
+
+        .wpcf7-form {
+            @extend .horizontal;
+            @extend .flex-wrap;
+        }
+
+        .field-2 {
+            width: 49%;
+            margin-bottom: 10px;
+            @include media-breakpoint-down(sm) { 
+                width: 100%;
+            }
+        }
+
+        .field-1 {
+            width: 100%;
+            margin-bottom: 10px;
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+
+        .field {
+            position: relative;
+            &::before {
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                color: $green;
+                z-index: 9;
+                font-family: FontAwesome;
+            }
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="email"],
+        textarea {
+            padding: 13px 10px 13px 40px;
+            width: 100%;
+            border: 1px solid $gray-600;
+            border-radius: 5px;
+            font-size: .9rem;
+            position: relative;
+            z-index: 1;
+            height: auto;
+        }
+
+        textarea  {
+            height: 140px;
+        }
+
+        .field-email{
+            &::before {
+                content: "\f0e0";
+            }
+        }
+        .field-profile{
+            &::before {
+                content: "\f007";
+            }
+        }
+        .field-number {
+            &::before {
+                content: "\f095";
+            }
+        }
+        .field-comment {
+            &::before {
+                content: "\f075";
+            }
+        }
+        .field-subject {
+            &::before {
+                content: "\f024";
+            }
+        }
+    }
+}

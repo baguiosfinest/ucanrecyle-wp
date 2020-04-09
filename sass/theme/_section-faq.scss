@@ -1,0 +1,53 @@
+.section-faq {
+
+    .card {
+        margin-bottom: 20px;
+    }
+
+    .card-header {
+        padding: 0;
+        color: $white;
+    }
+
+    .card-body {
+        padding: 2rem;
+        font-size: 1rem;
+        color: $gray-700;
+        font-weight: 300;
+    }
+
+    .btn-link {
+        border: none;
+        background: none;
+        display: block;
+        border: none;
+        width: 100%;
+        text-align: left;
+        text-decoration: none;
+        color: $white;
+        font-size: 1rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        padding: 15px;
+        background: $green;
+        transition: all .5s ease-in-out;
+
+        &::before {
+            content: "-";
+            position: absolute;
+            right: 20px;
+        }
+
+        &.collapsed {
+            background: $lightergreen;
+            &::before {
+                content: "+";
+            }
+            &:hover {
+                background: $green;
+            }
+        }
+
+
+    }
+}

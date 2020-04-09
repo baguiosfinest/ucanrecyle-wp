@@ -1,0 +1,33 @@
+.section-cta {
+
+    @include media-breakpoint-down(sm) { 
+        .inner {
+            flex-direction: column!important;
+        }
+    }
+
+    .cat_text {
+        flex: 1;
+        padding-right: 20px;
+        text-align: right;
+        @include media-breakpoint-down(sm) { 
+            text-align: center;
+        }
+        .section-title {
+            text-align: right;
+            padding-right: 0;
+            @include media-breakpoint-down(sm) { 
+                text-align: center!important;
+            }
+        }
+    }
+
+    .cat_image {
+        padding-left: 20px;
+        flex: 1;
+        @include media-breakpoint-down(sm) { 
+            padding-left: 0;
+            text-align: center;
+        }
+    }
+}
